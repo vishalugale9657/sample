@@ -1,0 +1,28 @@
+package com.vishal;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Example {
+	public static void main(String[] args) {
+		// creating ARRAYLIST OF EMPLOYEE and adding the object
+		ArrayList<Employee> arraylist = new ArrayList<Employee>();
+		arraylist.add(new Employee(11, "ram", 7500)); // here constructor is invoked
+		arraylist.add(new Employee(15, "hari", 6500));
+		arraylist.add(new Employee(23, "jay", 8500));
+
+		Collections.sort(arraylist); /// we cannot sort custom object by using collections.sort method because
+		// it showing the error
+		// to overcome this issue we should go for comparable and comparator
+
+		// now sort the salary by using for each loop
+		for (Employee i : arraylist) {
+
+			System.out.println("id==" + i.getId());
+			System.out.println("name==" + i.getName());
+			System.out.println("salary==" + i.getSalary());
+		}
+
+	}
+
+}
