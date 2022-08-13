@@ -1,0 +1,17 @@
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		ArrayList<Employee> arrayList = new ArrayList<Employee>();
+		arrayList.add(new Employee(5212, "yogesh"));
+		arrayList.add(new Employee(290023, "Raj"));
+
+		System.out.println(arrayList);
+
+		Collections.sort(arrayList, ((employee1,employee2)->(employee1.id<employee2.id)?-1:(employee1.id>employee2.id)?1:0));
+		//Collections.sort(arrayList, ((employee1,employee2)->employee1.name.compareTo(employee1.name)));
+
+		for (Employee e : arrayList) {
+
+			System.out.println(e.getId());
+			System.out.println(e.getName());
